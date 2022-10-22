@@ -3,11 +3,7 @@ import Vapor
 var messages = [Message]()
 
 func routes(_ app: Application) throws {
-    app.get { req async throws in
-        try await req.view.render("index")
-    }
-    
-    app.post("send") { req async throws in
+    app.post("send") { req async throws -> Response in
         guard let message = try? req.content.decode(Message.self) else {
             return req.redirect(to: "/")
         }

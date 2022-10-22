@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Список повідомлень</title>
+  <title>Вторинний сервер</title>
 </head>
 
 <body>
-  <h2>Список повідомлень:</h2>
+  <h2>Список повідомлень вторинного сервера:</h2>
   <ol>
     #for(message in messages): <li>#(message.text)</li> #endfor
   </ol>
